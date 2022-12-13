@@ -1,0 +1,31 @@
+<?php
+
+// Conexão com o banco de dados
+$db_host = "localhost";
+$db_username = "username";
+$db_password = "password";
+$db_name = "database_name";
+
+$db_connection = mysqli_connect($db_host, $db_username, $db_password, $db_name);
+
+if (mysqli_connect_errno()) {
+  die("Falha ao conectar com o banco de dados: " . mysqli_connect_error());
+}
+
+// Consulta de produtos
+$products_query = "SELECT * FROM products";
+$products_result = mysqli_query($db_connection, $products_query);
+
+// Loop através dos resultados e exibe cada produto em uma tabela
+while ($product = mysqli_fetch_assoc($products_result)) {
+  echo "<table>";
+  echo "<tr>";
+  echo "<td>" . $product['name'] . "</td>";
+  echo "<td>" . $product['description'] . "</td>";
+  echo "<td>" . $product['price'] . "</td>";
+  echo "</tr>";
+  echo "</table>";
+}
+
+// Fecha a conexão com o banco de dados
+mysqli_close($db_connection);
