@@ -1,0 +1,36 @@
+// Armazene os itens de tarefas em uma matriz
+let todoItems = [];
+
+// Crie uma função para adicionar um novo item de tarefa
+function addTodo(text) {
+  todoItems.push({
+    text: text,
+    done: false
+  });
+}
+
+// Crie uma função para exibir os itens pendentes
+function displayTodos() {
+  for (let i = 0; i < todoItems.length; i++) {
+    console.log(todoItems[i].text);
+  }
+}
+
+// Crie uma função para editar um item de tarefa pendente
+function editTodo(index, text) {
+  todoItems[index].text = text;
+}
+
+// Alguns itens de tarefas de exemplo
+addTodo("Leve o lixo pra fora");
+addTodo("Passe no supermercado");
+addTodo("Compre um bolo");
+
+// Mostra os to-do items
+displayTodos();
+
+// Edita o segundo to-do item
+editTodo(1, "Clean the kitchen");
+
+// Mostra os to-do items de novo
+displayTodos();
