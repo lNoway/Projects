@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Site de vendas</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+
+      .product-list {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .produto {
+        width: 200px;
+        margin: 10px;
+        text-align: center;
+      }
+
+      .produtor imagem {
+        width: 100%;
+      }
+
+      .nome do produto {
+        font-weight: bold;
+      }
+
+      .preço do produto {
+        color: #f00;
+        font-weight: bold;
+      }
+
+      .add ao carrinho {
+        display: inline-block;
+        padding: 5px 10px;
+        background-color: #00f;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+
+      .Botão de compra do carrinho {
+        background-color: #0f0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Simple Sales Site</h1>
+
+    <h2>Featured Products</h2>
+    <div class="product-list">
+      <div class="product-item">
+        <img class="product-image" src="https://via.placeholder.com/150" alt="Product 1">
+        <div class="product-name">Product 1</div>
+        <div class="product-price">$9.99</div>
+      
